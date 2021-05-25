@@ -1,5 +1,9 @@
 import { Router, Request, Response } from 'express';
 
+interface RequestWithBody extends Request {
+    body: { [key: string]: string | undefined }
+}
+
 const router = Router();
 
 // Route handlers
@@ -23,6 +27,7 @@ router.get('/login', (req, res) => {
     `)
 })
 
+// NB: There will be no sign up routes
 router.post('/login', (req: Request, res: Response) => {
     const { email, password } = req.body
 
