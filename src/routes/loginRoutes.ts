@@ -31,11 +31,15 @@ router.get('/login', (req, res) => {
 router.post('/login', (req: Request, res: Response) => {
     const { email, password } = req.body
 
-    if (email) {
-        res.send(email.toUpperCase())
+    if (email && password && email === 'cheeks@gmail.com' && password === 'password') {
+        // mark user as logged in
+        req.session = { loggedIn: true }
+        res.redirect('/')
+
     }
+
     else {
-        res.send('You must submit an email! ')
+        res.send('Invalid login credentials')
     }
 })
 
