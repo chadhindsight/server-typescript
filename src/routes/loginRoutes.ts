@@ -20,7 +20,7 @@ router.get('/login', (req, res) => {
             </div>
             <div>
                 <label>Password</label>
-                <input naem="password" type="password"/>
+                <input name="password" type="password"/>
             </div>
             <button>Submit</button>
          </form>
@@ -39,6 +39,7 @@ router.post('/login', (req: Request, res: Response) => {
     }
 
     else {
+        console.log(req.body)
         res.send('Invalid login credentials')
     }
 })
