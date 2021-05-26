@@ -4,6 +4,7 @@ interface RequestWithBody extends Request {
     body: { [key: string]: string | undefined }
 }
 
+// Auth middleware
 function requireAuth(req: Request, res: Response, next: NextFunction) {
     if (req.session && req.session.loggedIn) {
         next();
