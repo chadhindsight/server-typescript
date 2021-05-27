@@ -18,7 +18,7 @@ const router = Router();
 
 // Route handlers
 router.get('/', (req: Request, res: Response) => {
-    res.send('Wow ')
+    res.send('Wow')
 })
 
 router.get('/login', (req, res) => {
@@ -42,7 +42,7 @@ router.post('/login', (req: Request, res: Response) => {
     const { email, password } = req.body
 
     if (email && password && email === 'cheeks@gmail.com' && password === 'password') {
-        // mark user as logged in
+        // mark user as logged in.
         req.session = { loggedIn: true }
         res.redirect('/')
 
