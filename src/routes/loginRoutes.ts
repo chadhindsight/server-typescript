@@ -16,7 +16,7 @@ function requireAuth(req: Request, res: Response, next: NextFunction) {
 
 const router = Router();
 
-// Route handlers
+// Route handlers!
 router.get('/', (req: Request, res: Response) => {
     res.send('Wow')
 })
