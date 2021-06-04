@@ -21,21 +21,7 @@ router.get('/', (req: Request, res: Response) => {
     res.send('Wow')
 })
 
-router.get('/login', (req, res) => {
-    res.send(`
-         <form method="POST">
-            <div>
-                <label>Email </label>
-                <input name="email" />
-            </div>
-            <div>
-                <label>Password</label>
-                <input name="password" type="password"/>
-            </div>
-            <button>Submit</button>
-         </form>
-    `)
-})
+
 
 // NB: There will be no sign up routes
 router.post('/login', (req: Request, res: Response) => {
