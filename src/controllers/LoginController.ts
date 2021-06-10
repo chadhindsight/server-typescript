@@ -32,7 +32,7 @@ class LoginController {
       res.send('Invalid email or password');
     }
   }
-  // Log a  user out
+  // Logs a user out
   @get('/logout')
   getLogout(req: Request, res: Response) {
     req.session = undefined;
