@@ -39,4 +39,3 @@ class LoginController {
     res.redirect('/');
   }
 }
-// Your boy is lost ngl
