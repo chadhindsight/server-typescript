@@ -32,6 +32,7 @@ class LoginController {
       res.send('Invalid email or password');
     }
   }
+
   // Logs a user out
   @get('/logout')
   getLogout(req: Request, res: Response) {
