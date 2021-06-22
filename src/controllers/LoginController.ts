@@ -33,7 +33,7 @@ class LoginController {
     }
   }
 
-  // Logs a user out
+  // Logs a user out. Still here
   @get('/logout')
   getLogout(req: Request, res: Response) {
     req.session = undefined;
