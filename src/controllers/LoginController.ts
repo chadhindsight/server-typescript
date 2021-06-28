@@ -40,4 +40,3 @@ class LoginController {
     res.redirect('/');
   }
 }
-// THis is all pointless
